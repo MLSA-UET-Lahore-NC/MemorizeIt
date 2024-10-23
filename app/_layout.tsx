@@ -25,15 +25,14 @@ export default function RootLayout() {
   if (!loaded) {
     return null;
   }
-
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name='Signup' options={{ headerShown: false }} />
-        <Stack.Screen name='Login' options={{ headerShown: false }} />
+        <Stack.Screen name="Signup" options={{ headerShown: false }} />
+        <Stack.Screen name="Login" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="+not-found" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );
-}
+};
